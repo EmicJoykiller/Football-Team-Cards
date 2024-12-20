@@ -28,7 +28,7 @@ const myFavoriteFootballTeam = {
       isCaptain: false,
       nickname: null,
     },
-     {
+    {
       name: "Ricardo Bochini",
       position: "midfielder",
       number: 3,
@@ -170,4 +170,16 @@ const myFavoriteFootballTeam = {
     },
   ],
 };
- 
+
+Object.freeze(myFavoriteFootballTeam);
+const { sport, team, year, players } = myFavoriteFootballTeam;
+const { coachName } = myFavoriteFootballTeam.headCoach;
+
+typeOfSport.textContent = sport;
+teamName.textContent = team;
+worldCupYear.textContent = year;
+headCoach.textContent = coachName;
+
+const setPlayerCards = (arr = players) =>{
+     playerCards.innerHTML += arr.map(() => {})
+};
